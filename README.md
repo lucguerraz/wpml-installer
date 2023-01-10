@@ -1,7 +1,8 @@
 # WPML Installer for composer
-A composer plugin that makes installing WPML with composer easy.
-It reads your WPML user id and subscription info from environment variables
-This Plugin does not provide any WPML code. The plugins will be downloaded directly from wpml.org
+This is an composer plugin to make installing [wpml.org](https://wpml.org) plugins with composer easy.
+Your subscription info will be read from environment variables, will only be transmitted to WPML and will not be displayed in `composer.lock`.
+
+This composer plugin does not provide any WPML code. The WPML plugins will be downloaded directly from wpml.org
 
 ## Usage
 
@@ -38,13 +39,21 @@ When you request an older version you must be sure than WPML still provides a do
 
 ### 2. Save your WPML user id and subscription key to environment variables
 
-We do not provide any WPML code, the plugins are downloaded directly from WPML servers. Because of this we need your WPML subscription info to be able to download them. Your subscription info stays on your device and is only transmitted to WPML
+We do not provide any WPML code, the plugins are downloaded directly from WPML servers. Because of this we need your WPML subscription info to be able to download them. Your subscription info is stored in environment variables, is only transmitted to WPML and will not show up in `composer.lock`.
 
-You can get your user id and subscription key from a WPML provided download link, that you can get from your WPML dashboard. It will look like this:
+You can get your user id and subscription key from a WPML provided download link, that you can get from your [WPML dashboard](https://wpml.org/account/downloads/). It will look like this:
 `https://wpml.org/?download=6088&user_id=XXXXX&subscription_key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&version=4.5.14`
 
-You must save the `user_id` parameter in the `WPML_USER_ID` variable and the `subscription_key` parameter in the `WPML_SUBSCRIPTION_KEY` variable.
+You must save the `user_id` parameter in the `WPML_USER_ID` environment variable and the `subscription_key` parameter in the `WPML_SUBSCRIPTION_KEY` environment variable.
 
 ### 3. Require a WPML plugin
 
 `composer require wpml/sitepress-multilingual-cms`
+
+## Acknowledgments
+
+This composer plugin was created to add support to installing WPML with composer v2. It was heavily inspired by [`pernod-ricard-brandcos/wpml-installer`](https://bitbucket.org/pernod-ricard-brandcos/wpml-installer) and [`enelogic/wpml-installer`](https://github.com/enelogic/wpml-installer).
+
+## Disclaimer
+
+This project is not affiliated with WPML in any way, we do not provide any WPML code, all plugins are directly downloaded from wpml.org, your subscription info will be injected dynamically into the download link, your subscription info will only be transmitted to WPML and will not be displayed in `composer.lock`
