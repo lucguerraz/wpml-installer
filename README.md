@@ -1,0 +1,1 @@
+# WPML Composer Installer

@@ -1,0 +1,21 @@
+{
+  "name": "lucguerraz/wpml-installer",
+  "version": "0.1",
+  "type": "composer-plugin",
+  "require": {
+    "php": ">=8.0",
+    "composer-plugin-api": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "lucguerraz\\wpmlinstaller\\": "src"
+    },
+    "files": [
+      "src/exceptions.php"
+    ]
+  },
+  "extra": {
+    "class": "lucguerraz\\wpmlinstaller\\wpmlinstaller",
+    "plugin-modifies-downloads": true
+  }
+}
