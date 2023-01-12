@@ -1,6 +1,6 @@
 {
   "name": "lucguerraz/wpml-installer",
-  "description": "This is an composer plugin to make installing wpml.org plugins with composer easy. Your subscription info will be read from environment variables, will only be transmitted to WPML and will not be displayed in composer.lock.",
+  "description": "A composer plugin to make installing wpml.org plugins with composer easy. Your subscription info will be read from environment variables, will only be transmitted to WPML and will not be displayed in composer.lock.",
   "version": "0.1",
   "type": "composer-plugin",
   "keywords": [
