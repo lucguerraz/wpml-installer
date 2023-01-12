@@ -1,5 +1,5 @@
 # WPML Installer for composer
-This is an composer plugin to make installing [wpml.org](https://wpml.org) plugins with composer easy.
+A composer plugin to make installing [wpml.org](https://wpml.org) plugins with composer easy.
 Your subscription info will be read from environment variables, will only be transmitted to WPML and will not be displayed in `composer.lock`.
 
 This composer plugin does not provide any WPML code. The WPML plugins will be downloaded directly from wpml.org
